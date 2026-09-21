@@ -296,13 +296,13 @@ export type Miembro = { nombre: string; cargo: string; foto?: string };
 
 export const nosotros = {
   quienes: [
-    "[Cuenta quién es GGL: cuándo nació, qué hace y para quién trabaja.]",
-    "[Un segundo párrafo con lo que los distingue y cómo trabajan.]",
+    "Somos una empresa colombiana especializada en logística integral y comercio exterior que nace con la convicción de hacer las cosas de manera diferente",
+    "Creemos que la logística no debe ser únicamente un servicio operativo, sino una herramienta estratégica para impulsar el crecimiento de las organizaciones.",
   ],
-  proposito: "[Para qué existe GGL, más allá de ganar dinero.]",
-  mision: "[Qué hace GGL, para quién y cómo, en una o dos frases.]",
-  vision: "[Dónde quiere estar GGL en el futuro.]",
-  adn: "[Explica en un párrafo qué significa «Conectamos lo que importa» para la empresa y cómo se vive en el día a día.]",
+  proposito: "Impulsar el crecimiento de las empresas mediante soluciones logísticas inteligentes que conecten oportunidades, generen confianza y creen ventajas competitivas sostenibles.",
+  mision: "En Global Group Logistic S.A.S. – GGL Colombia desarrollamos soluciones integrales de logística y comercio exterior que simplifican la operación de nuestros clientes, fortalecen su cadena de suministro y generan valor en cada proceso. Más que coordinar operaciones, acompañamos estratégicamente a las empresas para que tomen mejores decisiones, optimicen recursos y operen con seguridad, eficiencia y confianza. Trabajamos con un equipo comprometido, aliados estratégicos y herramientas tecnológicas que nos permiten construir relaciones duraderas basadas en la ética, la transparencia, la innovación y la excelencia operativa.",
+  vision: "Ser una de las organizaciones logísticas más confiables, innovadoras e influyentes de Colombia y Latinoamérica, reconocida por transformar la logística en una verdadera ventaja competitiva para nuestros clientes. Construiremos un grupo empresarial sólido, sostenible y de alto impacto, capaz de trascender generaciones, dejando un legado basado en la confianza, la innovación, el crecimiento responsable y el compromiso con el desarrollo del comercio nacional e internacional.",
+  adn: "Creemos en hacer negocios con transparencia, construir relaciones de confianza y acompañar a nuestros clientes como verdaderos aliados estratégicos. Cada operación representa un compromiso, cada cliente una relación y cada desafío una oportunidad para demostrar que la logística puede convertirse en una ventaja competitiva.En GGL trabajamos para permanecer en el tiempo, evolucionar constantemente y construir una organización que trascienda generaciones, dejando un legado de confianza, innovación y crecimiento sostenible.",
   valores: [
     { titulo: "[Valor 1]", texto: "Qué significa en la práctica." },
     { titulo: "[Valor 2]", texto: "Qué significa en la práctica." },

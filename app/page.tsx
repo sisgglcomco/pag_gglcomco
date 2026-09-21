@@ -1,13 +1,15 @@
 import Link from "next/link";
 import ClientesStrip from "@/components/ClientesStrip";
 import ContactBand from "@/components/ContactBand";
+import HeroMedia from "@/components/HeroMedia";
 import { site, servicios, porQue, cobertura, nosotros } from "@/lib/site";
 
 export default function Inicio() {
   return (
     <>
-      {/* 1. HERO */}
+      {/* 1. HERO (foto de fondo con elevación al bajar) */}
       <section className="hero">
+        <HeroMedia />
         <div className="wrap">
           <div>
             <h1>{site.lema}.</h1>
@@ -78,7 +80,7 @@ export default function Inicio() {
       </section>
 
       {/* 4. PROMESA DE VALOR + POR QUÉ ELEGIRNOS */}
-      <section className="section tint" id="por-que">
+      <section className="section dark" id="por-que">
         <div className="wrap">
           <div className="split">
             <div>

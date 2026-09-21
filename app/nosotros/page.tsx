@@ -55,7 +55,7 @@ export default function Nosotros() {
       </section>
 
       {/* ADN */}
-      <section className="section tint">
+      <section className="section dark">
         <div className="wrap split">
           <h2>Nuestro ADN</h2>
           <div className="prose">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TransicionPagina from "@/components/TransicionPagina";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -40,10 +41,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${display.variable} ${body.variable}`}>
+    <html
+      lang="es"
+      className={`${display.variable} ${body.variable}`}
+      data-scroll-behavior="smooth"
+    >
       <body>
         <Header />
-        <main>{children}</main>
+        <main>
+          <TransicionPagina>{children}</TransicionPagina>
+        </main>
         <Footer />
       </body>
     </html>
