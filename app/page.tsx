@@ -47,28 +47,33 @@ export default function Inicio() {
       {/* 2. SERVICIOS */}
       <section className="section" id="servicios">
         <div className="wrap">
-          <h2>Nuestros servicios</h2>
-          <p className="lead" style={{ marginTop: "0.75rem" }}>
-            Una sola empresa para coordinar tu carga de principio a fin.
-          </p>
-          <ul className="svc-list">
+          <div className="svc-intro">
+            <h2>Nuestros servicios</h2>
+            <p className="lead">
+              Una sola empresa para coordinar tu carga de principio a fin.
+            </p>
+          </div>
+          {/* Tarjetas 2x2 con la quinta centrada abajo. Toda la tarjeta
+              es el enlace; al pasar el mouse sube un panel con la
+              descripción. En pantallas táctiles la descripción se ve
+              siempre, porque ahí no existe el "pasar el mouse". */}
+          <ul className="svc-grid">
             {servicios.map((s) => (
-              <li key={s.slug} className="svc-row">
-                <div>
-                  <h3>{s.titular}</h3>
-                  <p>{s.corta}</p>
-                </div>
-                <ul className="chips">
-                  {s.incluye.map((i) => (
-                    <li key={i.titulo}>{i.titulo}</li>
-                  ))}
-                </ul>
-                <Link
-                  className="btn ghost"
-                  href={`/${s.slug}`}
-                  aria-label={`Ver ${s.nombre}`}
-                >
-                  Ver servicio
+              <li key={s.slug}>
+                <Link className="svc-card" href={`/${s.slug}`}>
+                  <span className="svc-flecha" aria-hidden="true">
+                    →
+                  </span>
+                  <h3>{s.nombre}</h3>
+                  <div className="svc-panel">
+                    <span className="svc-panel-titulo" aria-hidden="true">
+                      {s.nombre}
+                    </span>
+                    <p>{s.corta}</p>
+                    <span className="svc-ir" aria-hidden="true">
+                      Ver servicio →
+                    </span>
+                  </div>
                 </Link>
               </li>
             ))}

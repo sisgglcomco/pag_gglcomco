@@ -50,10 +50,12 @@ Casi todo se cambia en `lib/site.ts`. Lo que está entre [corchetes] es un
 marcador para reemplazar con información real.
 
 1. Datos de contacto, dominio y lema (`site`).
-2. Servicios: textos, qué incluye, pasos y preguntas frecuentes (`servicios`).
-3. Promesa de valor, razones y cifras (`porQue`). Usa solo cifras reales; si no
+2. Accesos del botón «Ingreso» del menú (`accesos`): reemplaza el `#`
+   por la dirección real de cada portal.
+3. Servicios: textos, qué incluye, pasos y preguntas frecuentes (`servicios`).
+4. Promesa de valor, razones y cifras (`porQue`). Usa solo cifras reales; si no
    las tienes aún, borra el bloque `cifras`.
-4. Cobertura (`cobertura`) y contenido de Nosotros (`nosotros`).
+5. Cobertura (`cobertura`) y contenido de Nosotros (`nosotros`).
 
 Para fotos del equipo, guarda las imágenes en `public/equipo/` y escribe
 `foto: "/equipo/nombre.jpg"` en el miembro.

@@ -336,11 +336,6 @@ p { margin: 0 0 1em; }
 .section.dark .features div,
 .section.dark .stat { border-top-color: var(--line-navy); }
 .section.dark .stat strong { color: var(--white); }
-.section.dark .chips li {
-  background: rgba(245, 247, 250, 0.08);
-  border-color: var(--line-navy);
-  color: var(--on-navy);
-}
 .section.dark .ticks li::before { background: var(--on-navy); }
 .section.dark .motto { color: var(--white); }
 
@@ -497,6 +492,22 @@ p { margin: 0 0 1em; }
   border-radius: 0.75rem;
   box-shadow: 0 12px 30px rgba(11, 31, 51, 0.14);
 }
+/* Botón "Ingreso": pastilla delineada, para que se lea como acción
+   secundaria junto a la pastilla sólida de Contacto. */
+.nav .sub-btn.ingreso {
+  border: 2px solid var(--navy);
+  border-radius: 999px;
+  padding: 0.5rem 1.05rem;
+  margin-left: 0.4rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+.nav .sub-btn.ingreso:hover { background: var(--navy); color: var(--paper); }
+
+/* Es el último de la fila: el desplegable se alinea a la derecha para no
+   salirse del borde de la pantalla. */
+.submenu.derecha { left: auto; right: 0; min-width: 12rem; }
+
 .submenu.open { display: block; }
 .submenu a { display: block; border-bottom: 0; border-radius: 0.5rem; padding: 0.65rem 0.8rem; }
 .submenu a:hover { background: var(--paper); }
@@ -521,30 +532,137 @@ p { margin: 0 0 1em; }
   .submenu a { padding: 0.75rem 0; border-bottom: 1px solid var(--line); border-radius: 0; }
   .submenu a:hover { background: transparent; }
   .submenu a[aria-current="page"] { background: transparent; font-weight: 600; }
+  /* En el menú desplegado la pastilla no aporta: vuelve a ser una fila. */
+  .nav .sub-btn.ingreso {
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    padding: 0.85rem 0;
+    margin-left: 0;
+  }
+  .nav .sub-btn.ingreso:hover { background: transparent; color: inherit; }
+  .submenu.derecha { right: auto; }
 }
-/* ---------- Filas de servicios (portada) ---------- */
 
-.svc-list { list-style: none; margin: 2rem 0 0; padding: 0; }
-.svc-row {
+/* ---------- Tarjetas de servicios (portada) ---------- */
+
+/* Encabezado de la sección, centrado. El .lead trae max-width, así que
+   necesita márgenes automáticos para quedar centrado de verdad. */
+.svc-intro { text-align: center; }
+.svc-intro .lead { margin: 0.75rem auto 0; }
+
+/* Cuatro columnas y cada tarjeta ocupa dos: así salen dos por fila y la
+   quinta puede empezar en la columna 2, que la deja centrada. */
+.svc-grid {
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 0;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) auto;
-  gap: 1rem 2rem;
-  align-items: start;
-  padding: 1.5rem 0;
-  border-top: 2px solid var(--navy);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.1rem;
+  max-width: 58rem;
+  margin-inline: auto;
 }
-.svc-row:last-child { border-bottom: 2px solid var(--navy); }
-.svc-row h3 { font-size: 1.5rem; }
-.svc-row p { margin: 0.4rem 0 0; color: var(--ink-soft); }
-.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.chips li { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 0.3rem 0.85rem; font-size: 0.95rem; }
-@media (max-width: 900px) { .svc-row { grid-template-columns: 1fr; } .svc-row .btn { justify-self: start; } }
+.svc-grid > li { grid-column: span 2; }
+.svc-grid > li:last-child { grid-column: 2 / span 2; }
+
+.svc-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 10rem;
+  height: 100%;
+  padding: 1.35rem;
+  border: 2px solid var(--navy);
+  border-radius: 0.9rem;
+  background: var(--white);
+  color: var(--navy);
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.svc-card h3 { font-size: 1.3rem; margin: 0; }
+
+.svc-flecha {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.35rem;
+  font-size: 1.35rem;
+  line-height: 1;
+  color: var(--accent);
+  transition: transform 0.25s ease;
+}
+
+/* El panel espera fuera del borde inferior y sube al pasar el mouse. */
+.svc-panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.45rem;
+  padding: 1.35rem;
+  background: var(--navy);
+  color: var(--on-navy);
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.svc-panel-titulo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+.svc-panel p { margin: 0; color: var(--on-navy-soft); }
+.svc-ir { font-weight: 600; font-size: 0.95rem; }
+
+/* Solo donde el mouse existe de verdad. */
+@media (hover: hover) {
+  .svc-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(11, 31, 51, 0.16); }
+  .svc-card:hover .svc-flecha { transform: translate(3px, -3px); }
+  .svc-card:hover .svc-panel,
+  .svc-card:focus-visible .svc-panel { transform: translateY(0); }
+}
+
+/* En pantallas táctiles no hay hover: la descripción se muestra siempre,
+   como parte de la tarjeta y sin fondo navy. */
+@media (hover: none) {
+  /* Sin panel flotante la tarjeta puede ajustarse a su contenido. */
+  .svc-card { justify-content: flex-start; min-height: 0; padding-top: 1.6rem; }
+  .svc-panel {
+    position: static;
+    transform: none;
+    padding: 0;
+    margin-top: 0.6rem;
+    background: transparent;
+    color: var(--ink-soft);
+  }
+  .svc-panel-titulo { display: none; }
+  .svc-panel p { color: var(--ink-soft); }
+  /* La flecha del rincón choca con los títulos largos en pantallas
+     angostas; ahí la señal de que se puede tocar es esta línea. */
+  .svc-flecha { display: none; }
+  .svc-ir { display: block; margin-top: 0.15rem; color: var(--accent); }
+}
+
+@media (max-width: 640px) {
+  .svc-grid { grid-template-columns: 1fr; }
+  .svc-grid > li,
+  .svc-grid > li:last-child { grid-column: auto; }
+}
 
 /* ---------- Cifras ---------- */
 
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 1.5rem; margin-top: 3rem; }
 .stat { border-top: 2px solid var(--navy); padding-top: 0.9rem; }
 .stat strong { display: block; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); line-height: 1; color: var(--navy); }
+/* El ">" es importante: solo la etiqueta, no el span que Cifra pone
+   dentro del <strong> con el número. */
 .stat > span { color: var(--ink-soft); font-size: 0.98rem; }
 
 /* ---------- Bloques de 3 columnas ---------- */

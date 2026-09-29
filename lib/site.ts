@@ -16,6 +16,19 @@ export const site = {
 };
 
 /* ------------------------------------------------------------
+   ACCESOS  (botón "Ingreso" del menú)
+   Reemplaza el "#" por la dirección real de cada portal.
+   externo: true abre el enlace en una pestaña nueva.
+------------------------------------------------------------ */
+
+export type Acceso = { nombre: string; url: string; externo?: boolean };
+
+export const accesos: Acceso[] = [
+  { nombre: "Ingreso cliente", url: "#", externo: true },
+  { nombre: "Ingreso GGL", url: "#", externo: true },
+];
+
+/* ------------------------------------------------------------
    SERVICIOS  (cada uno es una página: tudominio.com/<slug>)
    Esta parte define cual es la estructura que debe cumplir la pagina
 ------------------------------------------------------------ */
@@ -96,7 +109,7 @@ export const servicios: Servicio[] = [
   {
     slug: "transporte-internacional",
     nombre: "Transporte Internacional",
-    corta: "DTAI, Marítimo, aéreo, multimodal y courier.",
+    corta: "Marítimo, aéreo, multimodal y courier.",
     titular: "Soluciones de transporte internacional",
     entrada:
       "Movemos tu carga entre países por el medio que mejor se ajuste a tu volumen, tu urgencia y tu presupuesto.",
@@ -118,10 +131,6 @@ export const servicios: Servicio[] = [
         titulo: "Courier",
         texto: "Envíos de documentos y paquetes pequeños entre países.",
       },
-      {
-        titulo: "DTAI",
-        texto: "Movilizamos tu importación bajo control aduanero, rápido, seguro y sin complicaciones.",
-      }
     ],
     pasos: pasosBase,
     preguntas: [
@@ -143,7 +152,7 @@ export const servicios: Servicio[] = [
         texto: "Movilización de carga por carretera dentro del país.",
       },
       {
-        titulo: "OTM, DTA, ITR y traslados",
+        titulo: "OTM, DTA, DTAI, ITR y traslados",
         texto:
           "[Describe con tus palabras cómo manejan estos tránsitos y traslados.]",
       },
@@ -163,7 +172,7 @@ export const servicios: Servicio[] = [
   {
     slug: "valor-agregado",
     nombre: "Valor Agregado",
-    corta: "Almacenamiento, seguros de carga, carga proyectos y mercancías especiales.",
+    corta: "Almacenamiento, seguros de carga, carga de proyectos y mercancías especiales.",
     titular: "Soluciones de valor agregado",
     entrada:
       "Servicios complementarios que protegen tu carga y resuelven las necesidades que salen del transporte estándar.",
@@ -177,7 +186,7 @@ export const servicios: Servicio[] = [
         texto: "Cobertura ante daño o pérdida de tu mercancía en el transporte.",
       },
       {
-        titulo: "Carga proyectos",
+        titulo: "Carga de proyectos",
         texto:
           "Logística para cargas grandes, pesadas o de gran volumen que requieren planeación especial.",
       },
