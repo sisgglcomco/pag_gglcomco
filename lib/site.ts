@@ -96,7 +96,7 @@ export const servicios: Servicio[] = [
   {
     slug: "transporte-internacional",
     nombre: "Transporte Internacional",
-    corta: "Marítimo, aéreo, multimodal y courier.",
+    corta: "DTAI, Marítimo, aéreo, multimodal y courier.",
     titular: "Soluciones de transporte internacional",
     entrada:
       "Movemos tu carga entre países por el medio que mejor se ajuste a tu volumen, tu urgencia y tu presupuesto.",
@@ -118,6 +118,10 @@ export const servicios: Servicio[] = [
         titulo: "Courier",
         texto: "Envíos de documentos y paquetes pequeños entre países.",
       },
+      {
+        titulo: "DTAI",
+        texto: "Movilizamos tu importación bajo control aduanero, rápido, seguro y sin complicaciones.",
+      }
     ],
     pasos: pasosBase,
     preguntas: [
@@ -139,7 +143,7 @@ export const servicios: Servicio[] = [
         texto: "Movilización de carga por carretera dentro del país.",
       },
       {
-        titulo: "OTM, DTA, DTAI, ITR y traslados",
+        titulo: "OTM, DTA, ITR y traslados",
         texto:
           "[Describe con tus palabras cómo manejan estos tránsitos y traslados.]",
       },
@@ -159,7 +163,7 @@ export const servicios: Servicio[] = [
   {
     slug: "valor-agregado",
     nombre: "Valor Agregado",
-    corta: "Almacenamiento, seguros de carga, carga de proyectos y mercancías especiales.",
+    corta: "Almacenamiento, seguros de carga, carga proyectos y mercancías especiales.",
     titular: "Soluciones de valor agregado",
     entrada:
       "Servicios complementarios que protegen tu carga y resuelven las necesidades que salen del transporte estándar.",
@@ -173,7 +177,7 @@ export const servicios: Servicio[] = [
         texto: "Cobertura ante daño o pérdida de tu mercancía en el transporte.",
       },
       {
-        titulo: "Carga de proyectos",
+        titulo: "Carga proyectos",
         texto:
           "Logística para cargas grandes, pesadas o de gran volumen que requieren planeación especial.",
       },
@@ -234,7 +238,7 @@ export const servicios: Servicio[] = [
 ];
 
 /* ------------------------------------------------------------
-   PORTADA: promesa de valor, razones, cifras, cobertura, clientes
+   PORTADA: promesa de valor, razones, cifras y cobertura
 ------------------------------------------------------------ */
 
 export const porQue = {
@@ -276,18 +280,6 @@ export const cobertura = {
   ],
 };
 
-export type Cliente = { nombre: string; logo?: string };
-
-// Para usar un logo: guarda la imagen en /public/logos y escribe
-// logo: "/logos/nombre.png". Necesitas permiso de cada cliente.
-export const clientes: Cliente[] = [
-  { nombre: "Logo cliente 1" },
-  { nombre: "Logo cliente 2" },
-  { nombre: "Logo cliente 3" },
-  { nombre: "Logo aliado 1" },
-  { nombre: "Logo aliado 2" },
-];
-
 /* ------------------------------------------------------------
    NOSOTROS
 ------------------------------------------------------------ */
@@ -296,13 +288,13 @@ export type Miembro = { nombre: string; cargo: string; foto?: string };
 
 export const nosotros = {
   quienes: [
-    "Somos una empresa colombiana especializada en logística integral y comercio exterior que nace con la convicción de hacer las cosas de manera diferente",
-    "Creemos que la logística no debe ser únicamente un servicio operativo, sino una herramienta estratégica para impulsar el crecimiento de las organizaciones.",
+    "[Cuenta quién es GGL: cuándo nació, qué hace y para quién trabaja.]",
+    "[Un segundo párrafo con lo que los distingue y cómo trabajan.]",
   ],
-  proposito: "Impulsar el crecimiento de las empresas mediante soluciones logísticas inteligentes que conecten oportunidades, generen confianza y creen ventajas competitivas sostenibles.",
-  mision: "En Global Group Logistic S.A.S. – GGL Colombia desarrollamos soluciones integrales de logística y comercio exterior que simplifican la operación de nuestros clientes, fortalecen su cadena de suministro y generan valor en cada proceso. Más que coordinar operaciones, acompañamos estratégicamente a las empresas para que tomen mejores decisiones, optimicen recursos y operen con seguridad, eficiencia y confianza. Trabajamos con un equipo comprometido, aliados estratégicos y herramientas tecnológicas que nos permiten construir relaciones duraderas basadas en la ética, la transparencia, la innovación y la excelencia operativa.",
-  vision: "Ser una de las organizaciones logísticas más confiables, innovadoras e influyentes de Colombia y Latinoamérica, reconocida por transformar la logística en una verdadera ventaja competitiva para nuestros clientes. Construiremos un grupo empresarial sólido, sostenible y de alto impacto, capaz de trascender generaciones, dejando un legado basado en la confianza, la innovación, el crecimiento responsable y el compromiso con el desarrollo del comercio nacional e internacional.",
-  adn: "Creemos en hacer negocios con transparencia, construir relaciones de confianza y acompañar a nuestros clientes como verdaderos aliados estratégicos. Cada operación representa un compromiso, cada cliente una relación y cada desafío una oportunidad para demostrar que la logística puede convertirse en una ventaja competitiva.En GGL trabajamos para permanecer en el tiempo, evolucionar constantemente y construir una organización que trascienda generaciones, dejando un legado de confianza, innovación y crecimiento sostenible.",
+  proposito: "[Para qué existe GGL, más allá de ganar dinero.]",
+  mision: "[Qué hace GGL, para quién y cómo, en una o dos frases.]",
+  vision: "[Dónde quiere estar GGL en el futuro.]",
+  adn: "[Explica en un párrafo qué significa «Conectamos lo que importa» para la empresa y cómo se vive en el día a día.]",
   valores: [
     { titulo: "[Valor 1]", texto: "Qué significa en la práctica." },
     { titulo: "[Valor 2]", texto: "Qué significa en la práctica." },

@@ -5,9 +5,9 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="wrap">
         <span>
-          &copy; {new Date().getFullYear()} {site.nombre}
+          &copy; {new Date().getFullYear()} {"Global Group Logistics SAS"}
         </span>
-        <span>Hecho en Colombia</span>
+        <span>Designed by Ing. Felipe Diaz</span>
       </div>
     </footer>
   );

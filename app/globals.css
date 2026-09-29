@@ -331,7 +331,7 @@ p { margin: 0 0 1em; }
 .section.dark { background: var(--navy); color: var(--on-navy); }
 .section.dark .lead,
 .section.dark .features p,
-.section.dark .stat span,
+.section.dark .stat > span,
 .section.dark .prose p { color: var(--on-navy-soft); }
 .section.dark .features div,
 .section.dark .stat { border-top-color: var(--line-navy); }
@@ -522,16 +522,6 @@ p { margin: 0 0 1em; }
   .submenu a:hover { background: transparent; }
   .submenu a[aria-current="page"] { background: transparent; font-weight: 600; }
 }
-
-/* ---------- Franja de clientes y aliados ---------- */
-
-.logos { padding: 2rem 0; background: var(--paper); border-bottom: 1px solid var(--line); }
-.logos p { margin: 0 0 1rem; font-weight: 600; font-size: 0.95rem; color: var(--ink-soft); }
-.logos ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2.5rem; }
-.logos li { min-width: 7.5rem; height: 3.5rem; display: grid; place-items: center; color: var(--ink-soft); font-weight: 600; }
-.logos li.ph { border: 2px dashed var(--line); border-radius: 0.5rem; padding: 0 1rem; background: var(--white); }
-.logos img { width: 8.75rem; height: 3.5rem; object-fit: contain; }
-
 /* ---------- Filas de servicios (portada) ---------- */
 
 .svc-list { list-style: none; margin: 2rem 0 0; padding: 0; }
@@ -555,7 +545,7 @@ p { margin: 0 0 1em; }
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 1.5rem; margin-top: 3rem; }
 .stat { border-top: 2px solid var(--navy); padding-top: 0.9rem; }
 .stat strong { display: block; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); line-height: 1; color: var(--navy); }
-.stat span { color: var(--ink-soft); font-size: 0.98rem; }
+.stat > span { color: var(--ink-soft); font-size: 0.98rem; }
 
 /* ---------- Bloques de 3 columnas ---------- */
 

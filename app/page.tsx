@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ClientesStrip from "@/components/ClientesStrip";
+import Cifra from "@/components/Cifra";
 import ContactBand from "@/components/ContactBand";
 import HeroMedia from "@/components/HeroMedia";
 import { site, servicios, porQue, cobertura, nosotros } from "@/lib/site";
@@ -44,10 +44,7 @@ export default function Inicio() {
         </div>
       </section>
 
-      {/* 2. CLIENTES Y ALIADOS (prueba de confianza justo bajo el hero) */}
-      <ClientesStrip />
-
-      {/* 3. SERVICIOS */}
+      {/* 2. SERVICIOS */}
       <section className="section" id="servicios">
         <div className="wrap">
           <h2>Nuestros servicios</h2>
@@ -79,7 +76,7 @@ export default function Inicio() {
         </div>
       </section>
 
-      {/* 4. PROMESA DE VALOR + POR QUÉ ELEGIRNOS */}
+      {/* 3. PROMESA DE VALOR + POR QUÉ ELEGIRNOS */}
       <section className="section dark" id="por-que">
         <div className="wrap">
           <div className="split">
@@ -102,7 +99,9 @@ export default function Inicio() {
           <div className="stats">
             {porQue.cifras.map((c) => (
               <div className="stat" key={c.etiqueta}>
-                <strong>{c.valor}</strong>
+                <strong>
+                  <Cifra valor={c.valor} />
+                </strong>
                 <span>{c.etiqueta}</span>
               </div>
             ))}
@@ -110,7 +109,7 @@ export default function Inicio() {
         </div>
       </section>
 
-      {/* 5. COBERTURA Y UBICACIÓN */}
+      {/* 4. COBERTURA Y UBICACIÓN */}
       <section className="section" id="cobertura">
         <div className="wrap">
           <h2>Cobertura y ubicación</h2>
@@ -128,7 +127,7 @@ export default function Inicio() {
         </div>
       </section>
 
-      {/* 6. QUIÉNES SOMOS (resumen) */}
+      {/* 5. QUIÉNES SOMOS (resumen) */}
       <section className="section tint" id="quienes-somos">
         <div className="wrap split">
           <h2>Quiénes somos</h2>
@@ -141,7 +140,7 @@ export default function Inicio() {
         </div>
       </section>
 
-      {/* 7. CONTACTO */}
+      {/* 6. CONTACTO */}
       <ContactBand
         titulo="Hablemos de tu carga"
         texto="Cuéntanos qué necesitas mover y te respondemos lo antes posible."

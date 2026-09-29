@@ -7,7 +7,7 @@ Hecho con Next.js (App Router) y TypeScript.
 
 | Página | Ruta | Contenido |
 |---|---|---|
-| Inicio | `/` | Hero, clientes y aliados, servicios, por qué elegir GGL, cobertura, resumen de quiénes somos, contacto |
+| Inicio | `/` | Hero, servicios, por qué elegir GGL, cobertura, resumen de quiénes somos, contacto |
 | Comercio Exterior | `/comercio-exterior` | Coordinación aduanera, importaciones, exportaciones, asesoría |
 | Transporte Internacional | `/transporte-internacional` | Marítimo, aéreo, multimodal, courier |
 | Transporte Nacional | `/transporte-nacional` | Terrestre, OTM/DTA/DTAI/ITR y traslados, distribución |
@@ -28,7 +28,8 @@ app/
 components/
 ├── Header.tsx            Menú con submenú de Servicios y versión móvil
 ├── Footer.tsx
-├── ClientesStrip.tsx     Franja de logos de clientes y aliados
+├── HeroMedia.tsx         Foto de fondo del hero con elevación al bajar
+├── TransicionPagina.tsx  Entrada suave al cambiar de página
 └── ContactBand.tsx       Banda de contacto (WhatsApp y correo)
 lib/
 └── site.ts               TODO el contenido editable
@@ -52,12 +53,10 @@ marcador para reemplazar con información real.
 2. Servicios: textos, qué incluye, pasos y preguntas frecuentes (`servicios`).
 3. Promesa de valor, razones y cifras (`porQue`). Usa solo cifras reales; si no
    las tienes aún, borra el bloque `cifras`.
-4. Cobertura (`cobertura`), clientes (`clientes`) y contenido de Nosotros
-   (`nosotros`).
+4. Cobertura (`cobertura`) y contenido de Nosotros (`nosotros`).
 
-Para poner logos de clientes, guarda las imágenes en `public/logos/` y escribe
-`logo: "/logos/nombre.png"` en el cliente. Para fotos del equipo, `public/equipo/`
-y `foto: "/equipo/nombre.jpg"`.
+Para fotos del equipo, guarda las imágenes en `public/equipo/` y escribe
+`foto: "/equipo/nombre.jpg"` en el miembro.
 
 Si no usas una sección (por ejemplo "Nuestro objetivo"), borra su bloque en el
 archivo de la página correspondiente.

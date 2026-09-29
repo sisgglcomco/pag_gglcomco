@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ClientesStrip from "@/components/ClientesStrip";
 import ContactBand from "@/components/ContactBand";
 import { servicios, porQue } from "@/lib/site";
 
@@ -69,8 +68,6 @@ export default async function ServicioPage({ params }: Props) {
           </div>
         </div>
       </section>
-
-      <ClientesStrip />
 
       <section className="section">
         <div className="wrap">
