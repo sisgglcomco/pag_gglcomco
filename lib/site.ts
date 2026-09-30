@@ -172,28 +172,38 @@ export const servicios: Servicio[] = [
   {
     slug: "valor-agregado",
     nombre: "Valor Agregado",
-    corta: "Almacenamiento, seguros de carga, carga de proyectos y mercancías especiales.",
+    corta: "Logística Integral, Atención Personalizada, Seguros, Carga Proyectos, Mercancías Especiales, Tecnología e Innovación.",
     titular: "Soluciones de valor agregado",
     entrada:
       "Servicios complementarios que protegen tu carga y resuelven las necesidades que salen del transporte estándar.",
     incluye: [
       {
-        titulo: "Almacenamiento",
-        texto: "Bodegaje de tu mercancía durante el tiempo que la necesites.",
+        titulo: "Logística Integral",
+        texto: "Optimizamos cada etapa de tu proceso para garantizar un flujo continuo y eficiente de tus bienes y servicios.",
       },
       {
-        titulo: "Seguros de carga",
+        titulo: "Seguros",
         texto: "Cobertura ante daño o pérdida de tu mercancía en el transporte.",
       },
       {
-        titulo: "Carga de proyectos",
+        titulo: "Carga Proyectos",
         texto:
           "Logística para cargas grandes, pesadas o de gran volumen que requieren planeación especial.",
       },
       {
-        titulo: "Mercancías especiales",
+        titulo: "Mercancías Especiales",
         texto:
           "Manejo de carga que exige condiciones, permisos o cuidados particulares.",
+      },
+      {
+        titulo: "Atención Personalizada",
+        texto:
+          "Servicio dedicado a atender las necesidades específicas de cada cliente.",
+      },
+      {
+        titulo: "Tecnología e Innovación",
+        texto:
+          "Implementamos soluciones tecnológicas para mejorar la eficiencia y el control de tu logística.",
       },
     ],
     pasos: pasosBase,
@@ -275,17 +285,17 @@ export const porQue = {
     { valor: "+03", etiqueta: "Años de experiencia" },
     { valor: "+30", etiqueta: "Clientes atendidos" },
     { valor: "+350", etiqueta: "Operaciones realizadas" },
-    { valor: "00%", etiqueta: "[indicador de servicio]" },
+    { valor: "+40", etiqueta: "Países" },
   ],
 };
 
 export const cobertura = {
   intro:
-    "[Una frase que explique dónde operan y cómo llegan a donde está el cliente.]",
+    "Contamos con presencia en las principales ciudades y puertos del país y aliados estrategicos internacionales.",
   zonas: [
-    { titulo: "Nacional", texto: "[Ciudades, puertos y aeropuertos donde operan.]" },
-    { titulo: "Internacional", texto: "[Países o regiones que cubren.]" },
-    { titulo: "Oficina principal", texto: "[Dirección, ciudad y horario de atención.]" },
+    { titulo: "Nacional", texto: "Bogotá, Buenaventura, Cali, Cartagena, Medellin." },
+    { titulo: "Internacional", texto: " Asia, Europa, Latam, Lejano Oriente, Norteamérica." },
+    { titulo: "Oficina principal", texto: "Avenida Troncal de Occidente #20-85 Zona Franca de Occidente Oficina 301, Mosquera, Cundinamarca." },
   ],
 };
 
@@ -297,7 +307,7 @@ export type Miembro = { nombre: string; cargo: string; foto?: string };
 
 export const nosotros = {
   quienes: [
-    "[Cuenta quién es GGL: cuándo nació, qué hace y para quién trabaja.]",
+    "En GGL somos una empresa colombiana especializada en logística integral y comercio exterior. Diseñamos soluciones a la medida de cada negocio, brindando acompañamiento cercano, experiencia y confianza para hacer más eficientes sus operaciones. Trabajamos con una visión de largo plazo, impulsando la innovación y construyendo relaciones que generan resultados.",
     "[Un segundo párrafo con lo que los distingue y cómo trabajan.]",
   ],
   proposito: "[Para qué existe GGL, más allá de ganar dinero.]",
